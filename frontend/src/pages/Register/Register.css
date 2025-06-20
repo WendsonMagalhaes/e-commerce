@@ -1,0 +1,123 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+    height: 100vh;
+}
+
+.register-container {
+    background: var(--primary-bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    border: 3px solid var(--primary-purple);
+}
+
+.register-container-input {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.register-container h2 {
+    color: var(--primary-color-font);
+}
+
+.register-container label {
+    color: var(--primary-color-font);
+    margin-bottom: -10px;
+}
+
+.register-container input {
+    width: 100%;
+    background: var(--primary-bg-color);
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 2px solid var(--primary-purple);
+    color: var(--primary-purple);
+    outline: none;
+}
+
+.register-container input {
+    border-color: var(--second-purple);
+
+}
+
+.register-btn {
+    width: 80%;
+    padding: 10px;
+    background-color: var(--primary-purple);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: var(--second-purple);
+}
+
+.register-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.register-message.success {
+    color: var(--primary-purple);
+    background-color: rgba(142, 123, 243, 0.1);
+    border: 1px solid var(--primary-purple);
+}
+
+.register-message.error {
+    color: #ff4d4f;
+    background-color: rgba(255, 77, 79, 0.1);
+    border: 1px solid #ff4d4f;
+}
+
+.register-back-button-container {
+    display: flex;
+    width: 100%;
+    align-items: start;
+    margin-bottom: 15px;
+}
+
+.register-back-button-container .icon {
+    width: 30px;
+    height: 30px;
+    color: var(--primary-purple);
+    cursor: pointer;
+}
+
+.register-back-button-container .icon:hover {
+    color: var(--second-purple);
+}
+
+.register-container a {
+    color: var(--primary-purple);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-container a:hover {
+    color: var(--primary-color-font);
+    text-decoration: underline;
+}
+
+.register-link {
+    margin-top: 15px;
+    text-align: center;
+}

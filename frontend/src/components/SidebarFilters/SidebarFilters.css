@@ -1,0 +1,154 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: var(--primary-bg-color);
+    font-family: 'Segoe UI', sans-serif;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    border-right: 2px solid var(--primary-purple);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-bg-color);
+    z-index: 2;
+    padding: 15px 20px 10px 20px;
+    border-bottom: 2px solid var(--primary-purple);
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-purple);
+}
+
+.sidebar aside {
+    width: 100%;
+    padding-right: 0;
+}
+
+.sidebar * {
+    box-sizing: border-box;
+    max-width: 100%;
+    border: none;
+}
+
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.sidebar li {
+    margin-bottom: 6px;
+}
+
+.sidebar label {
+    font-size: 0.95rem;
+    color: var(--primary-purple);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.sidebar label:hover {
+    color: var(--second-purple);
+}
+
+.sidebar input[type="checkbox"],
+.sidebar input[type="radio"] {
+    accent-color: var(--primary-purple);
+    cursor: pointer;
+    outline: none;
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: var(--primary-purple);
+    cursor: pointer;
+}
+
+.arrow-icon {
+    color: var(--primary-purple);
+    margin-left: 8px;
+    margin-right: 6px;
+    transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotate {
+    transform: rotate(90deg);
+}
+
+.filter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 2px solid var(--primary-purple);
+    border-radius: 5px;
+}
+
+.filter-header h4 {
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 0;
+    margin-left: 10px;
+    font-weight: 600;
+    color: var(--primary-purple);
+}
+
+@media (min-width: 769px) {
+    .sidebar {
+        position: static;
+        transform: none;
+        width: 300px;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .close-sidebar {
+        display: none;
+    }
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--primary-purple);
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-purple) transparent;
+}

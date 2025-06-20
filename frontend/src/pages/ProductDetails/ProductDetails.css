@@ -1,0 +1,239 @@
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--primary-bg-color);
+}
+
+.product-detail-container {
+    overflow-y: auto;
+}
+
+.section {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--primary-bg-color);
+}
+
+.section-top .image-container {
+    flex: 1;
+    display: flex;
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-top .image-container img {
+    width: 60%;
+    border-radius: 10px;
+}
+
+.section-top .info-container {
+    flex: 1;
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    border-left: 2px solid var(--primary-purple);
+}
+
+.section-top .info-container h1 {
+    color: var(--primary-purple);
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+
+.section-top .info-container p {
+    color: var(--second-color-font);
+    font-style: italic;
+    margin-bottom: -10px;
+}
+
+.section-top .info-container .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--second-purple);
+    margin-bottom: -5px;
+    font-style: normal;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.quantity-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 20px;
+    padding: 0 20px 20px;
+    width: 50%;
+}
+
+.quantity-container h3 {
+    color: var(--primary-purple);
+}
+
+.quantity-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+.quantity-input button {
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    background-color: var(--primary-purple);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.quantity-input button:hover {
+    background-color: var(--second-purple);
+}
+
+.quantity-input span {
+    color: var(--second-color-font);
+}
+
+.add-cart-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 0 20px 20px;
+    width: 50%;
+}
+
+.add-cart-btn {
+    padding: 10px;
+    background-color: var(--primary-purple);
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-cart-btn:hover {
+    background-color: var(--second-purple);
+}
+
+
+
+.section-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid var(--primary-purple);
+    padding: 20px 100px;
+    background-color: var(--primary-bg-color);
+    width: 100%;
+}
+
+.section-bottom .related-products {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.related-card {
+    width: 200px;
+    text-align: center;
+    border: 1px solid var(--primary-purple);
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--second-color-font);
+    background-color: var(--primary-bg-color);
+}
+
+.related-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+@media (max-width: 1024px) {
+    .section-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .section-top .info-container {
+        padding: 20px 30px;
+        border-left: none;
+        border-top: 2px solid var(--primary-purple);
+        width: 100%;
+    }
+
+    .quantity-container,
+    .add-cart-btn-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .quantity-input {
+        margin-left: 0;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-bottom {
+        padding: 20px;
+    }
+
+    .related-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-top .image-container img {
+        width: 100%;
+    }
+
+    .related-card {
+        width: 100%;
+    }
+
+    .section-top .info-container h1 {
+        font-size: 24px;
+    }
+
+    .section-top .info-container .price {
+        font-size: 20px;
+    }
+
+    .add-cart-btn {
+        font-size: 16px;
+    }
+
+    .quantity-input button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+}

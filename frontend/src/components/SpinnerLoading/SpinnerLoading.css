@@ -1,0 +1,27 @@
+.spinner-loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    color: var(--second-color-font);
+}
+
+.spinner {
+    border: 5px solid var(--second-purple);
+    border-top: 5px solid var(--primary-purple);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

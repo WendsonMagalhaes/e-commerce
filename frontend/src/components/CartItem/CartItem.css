@@ -1,0 +1,287 @@
+.cart-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+
+}
+
+.cart-card {
+    display: flex;
+    background: var(--primary-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    gap: 10px;
+    border: 2px solid var(--primary-purple);
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.cart-card input[type="checkbox"] {
+    accent-color: var(--second-purple);
+    width: 20px;
+    height: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+
+
+}
+
+.cart-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-card .info {
+    flex: .8;
+    color: var(--second-color-font);
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-around;
+    padding-left: 30px;
+
+}
+
+.cart-card .info h4 {
+    margin: 0;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.cart-card .info p {
+    margin: 5px 0;
+    color: var(--third-color-font);
+    font-size: 20px;
+
+}
+
+.cart-card .info span {
+    margin: 5px 0;
+    color: var(--third-color-font);
+    font-size: 16px;
+    font-style: italic;
+
+}
+
+.cart-card .info-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart-card .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 20px;
+    color: var(--second-color-font);
+}
+
+
+.cart-card .actions button {
+    background: var(--primary-purple);
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 5px 8px;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+
+.cart-card .actions button:hover {
+    background: var(--second-purple);
+}
+
+.cart-card .actions .icon {
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.cart-card .actions .remove {
+    color: var(--primary-purple);
+}
+
+.cart-card .actions .remove:hover {
+    color: var(--second-purple);
+}
+
+@media (max-width: 1366px) {
+    .cart-card .info h4 {
+        font-size: 22px;
+    }
+
+    .cart-card .info p {
+        font-size: 18px;
+
+    }
+
+    .cart-card .info span {
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 860px) {
+    .cart-card .info h4 {
+        font-size: 24px;
+    }
+
+    .cart-card .info p {
+        font-size: 20px;
+
+    }
+
+    .cart-card .info span {
+        font-size: 16px;
+    }
+
+}
+
+
+.icon-close {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .cart-card {
+        flex-direction: row;
+        position: relative;
+        padding-top: 40px;
+    }
+
+    .cart-card {
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .cart-card input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+    }
+
+    .cart-card .info {
+
+        height: 180px;
+        padding-left: 15px;
+
+    }
+
+    .cart-card img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .cart-card .info {
+        flex: .8;
+        color: var(--second-color-font);
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-around;
+        padding-left: 30px;
+
+    }
+
+    .cart-card .info h4 {
+        margin: 0;
+        cursor: pointer;
+        font-size: 22px;
+    }
+
+    .cart-card .info p {
+        margin: 5px 0;
+        color: var(--third-color-font);
+        font-size: 18px;
+
+    }
+
+    .cart-card .info span {
+        margin: 5px 0;
+        color: var(--third-color-font);
+        font-size: 14px;
+        font-style: italic;
+
+    }
+
+
+
+
+    .cart-card .actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cart-card .remove {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+    }
+
+    .icon-trash {
+        display: none;
+    }
+
+    .icon-close {
+        display: inline;
+        font-size: 24px;
+        color: var(--primary-purple);
+    }
+
+    .icon-close:hover {
+        color: var(--second-purple);
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-card .info h4 {
+        font-size: 18px;
+    }
+
+    .cart-card img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .cart-card .info p {
+        font-size: 14px;
+
+    }
+
+    .cart-card .info span {
+        font-size: 10px;
+    }
+
+
+    .cart-card {
+        padding: 0px;
+        gap: 0px;
+    }
+
+
+    .cart-card .info {
+
+        height: 160px;
+        padding-left: 10px;
+
+    }
+
+}

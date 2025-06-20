@@ -1,0 +1,123 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+    height: 100vh;
+}
+
+.login-container {
+    background: var(--primary-bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    border: 3px solid var(--primary-purple);
+}
+
+.login-container-input {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.login-container h2 {
+    color: var(--primary-color-font);
+}
+
+.login-container label {
+    color: var(--primary-color-font);
+    margin-bottom: -30px;
+}
+
+.login-container input {
+    width: 100%;
+    background: var(--primary-bg-color);
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 2px solid var(--primary-purple);
+    color: var(--primary-purple);
+    outline: none;
+
+}
+
+.login-container input:focus {
+    border-color: var(--second-purple);
+
+}
+
+.login-btn {
+    width: 80%;
+    padding: 10px;
+    background-color: var(--primary-purple);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: var(--second-purple);
+
+}
+
+.login-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.login-message.success {
+    color: var(--primary-purple);
+    background-color: rgba(142, 123, 243, 0.1);
+    border: 1px solid var(--primary-purple);
+}
+
+.login-message.error {
+    color: #ff4d4f;
+    background-color: rgba(255, 77, 79, 0.1);
+    border: 1px solid #ff4d4f;
+}
+
+.login-container a {
+    color: var(--primary-purple);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-container a:hover {
+    color: var(--primary-color-font);
+    text-decoration: underline;
+}
+
+.login-back-button-container {
+    display: flex;
+    width: 100%;
+    align-items: start;
+}
+
+.login-back-button-container .icon {
+    width: 30px;
+    height: 30px;
+    color: var(--primary-purple);
+}
+
+
+.login-back-button-container .icon:hover {
+    color: var(--second-purple);
+}
+
+.login-link {
+    margin-top: 15px;
+    text-align: center;
+}
