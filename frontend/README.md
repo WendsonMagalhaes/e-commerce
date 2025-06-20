@@ -51,9 +51,9 @@ cd frontend
 ```
 ### 2. Instale as dependências
 ```bash
-npm install
+npm install --force
 # ou
-yarn install
+yarn install --force
 ```
 ### 3. Rode o projeto
 ```bash
