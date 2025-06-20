@@ -135,7 +135,7 @@ const Home = () => {
                         <div className='spinner-loading-overlay'>
                             <SpinnerLoading />
                         </div>) : filteredProducts.length === 0 ? (
-                            <p>{t('Nenhum produto encontrado')}</p>
+                            <h2>{t('Nenhum produto encontrado')}</h2>
                         ) : (
                         <div className='product-grid'>
                             {filteredProducts.map(product => (

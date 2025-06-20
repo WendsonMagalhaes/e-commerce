@@ -101,32 +101,33 @@ class _FilterSidebarState extends State<FilterSidebar> {
     final isDark = theme.brightness == Brightness.dark;
 
     final sortedKeys = data.keys.toList()..sort();
-    final accentColor = isDark
+    final primaryColor = isDark
         ? AppColors.primaryPurple
-        : AppColors.lightSecondPurple;
-
-    final textColor = isDark
-        ? AppColors.secondFontColor
-        : AppColors.lightSecondFontColor;
+        : AppColors.lightPrimaryPurple;
 
     return ExpansionTile(
       title: Text(
         title,
-        style: TextStyle(fontWeight: FontWeight.bold, color: accentColor),
+        style: TextStyle(fontWeight: FontWeight.bold, color: primaryColor),
       ),
+      iconColor: primaryColor,
+      collapsedIconColor: primaryColor,
       children: sortedKeys.map((item) {
         final isChecked = selectedFilters[key]?.contains(item) ?? false;
 
-        return CheckboxListTile(
-          title: Text(
-            '$item (${data[item]})',
-            style: TextStyle(color: textColor),
+        return Theme(
+          data: Theme.of(context).copyWith(unselectedWidgetColor: primaryColor),
+          child: CheckboxListTile(
+            title: Text(
+              '$item (${data[item]})',
+              style: TextStyle(color: primaryColor),
+            ),
+            value: isChecked,
+            onChanged: (_) => toggleFilter(key, item),
+            controlAffinity: ListTileControlAffinity.leading,
+            activeColor: primaryColor,
+            checkColor: Colors.white,
           ),
-          value: isChecked,
-          onChanged: (_) => toggleFilter(key, item),
-          controlAffinity: ListTileControlAffinity.leading,
-          activeColor: accentColor,
-          checkColor: Colors.white,
         );
       }).toList(),
     );
@@ -137,37 +138,38 @@ class _FilterSidebarState extends State<FilterSidebar> {
     final isDark = theme.brightness == Brightness.dark;
 
     final rangesWithCounts = getPriceRangeCounts();
-    final accentColor = isDark
+    final primaryColor = isDark
         ? AppColors.primaryPurple
-        : AppColors.lightSecondPurple;
-
-    final textColor = isDark
-        ? AppColors.secondFontColor
-        : AppColors.lightSecondFontColor;
+        : AppColors.lightPrimaryPurple;
 
     return ExpansionTile(
       title: Text(
         'Faixa de Preço',
-        style: TextStyle(fontWeight: FontWeight.bold, color: accentColor),
+        style: TextStyle(fontWeight: FontWeight.bold, color: primaryColor),
       ),
+      iconColor: primaryColor,
+      collapsedIconColor: primaryColor,
       children: rangesWithCounts.map((range) {
         final isChecked =
             selectedMinPrice == range['min'].toString() &&
             selectedMaxPrice == range['max'].toString();
 
-        return CheckboxListTile(
-          title: Text(
-            '${range['label']} (${range['count']})',
-            style: TextStyle(color: textColor),
+        return Theme(
+          data: Theme.of(context).copyWith(unselectedWidgetColor: primaryColor),
+          child: CheckboxListTile(
+            title: Text(
+              '${range['label']} (${range['count']})',
+              style: TextStyle(color: primaryColor),
+            ),
+            value: isChecked,
+            onChanged: (_) => togglePriceRange(
+              range['min'].toString(),
+              range['max'].toString(),
+            ),
+            controlAffinity: ListTileControlAffinity.leading,
+            activeColor: primaryColor,
+            checkColor: Colors.white,
           ),
-          value: isChecked,
-          onChanged: (_) => togglePriceRange(
-            range['min'].toString(),
-            range['max'].toString(),
-          ),
-          controlAffinity: ListTileControlAffinity.leading,
-          activeColor: accentColor,
-          checkColor: Colors.white,
         );
       }).toList(),
     );
